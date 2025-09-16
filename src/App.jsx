@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import EffectExplore from "./component/EffectExplore";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,10 @@ function App() {
 
   return (
     <>
+      {/* useState practice */}
+      <h1 style={{ backgroundColor: "green", color: "white" }}>
+        useState Practice Task
+      </h1>
       <div className="container">
         <h1>Practice Task 1: Simple Counter</h1>
         <h1>{count}</h1>
@@ -75,6 +80,13 @@ function App() {
         />
         <button onClick={taskHandle}>Add Task</button>
       </div>
+
+      <h1 style={{ backgroundColor: "green", color: "white" }}>
+        useEffect Practice Task
+      </h1>
+
+      {/* useEffect Practice Task */}
+      <EffectExplore />
     </>
   );
 }
