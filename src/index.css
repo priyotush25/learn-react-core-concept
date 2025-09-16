@@ -14,3 +14,20 @@ button {
   border-radius: 8px;
   margin: 4px;
 }
+
+.container {
+  padding: 40px 80px;
+  border: 1px solid red;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.container:hover {
+  background-color: gainsboro;
+}
+
+input {
+  padding: 20px 50px;
+  border-radius: 10px;
+  font-size: 20px;
+}
