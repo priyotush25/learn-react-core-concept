@@ -6,6 +6,8 @@ function App() {
   const [text, setText] = useState("");
   const [isOn, setIsOn] = useState(false);
   const [color, setColor] = useState("black");
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
 
   const resetHandle = () => {
     setCount(0);
@@ -14,6 +16,11 @@ function App() {
   const inputHandle = (e) => {
     console.log(e.target.value);
     setText(e.target.value);
+  };
+
+  const taskHandle = () => {
+    setTasks([...tasks, task]);
+    setTask("");
   };
 
   return (
@@ -52,6 +59,21 @@ function App() {
         <button onClick={() => setColor("red")}>Red</button>
         <button onClick={() => setColor("green")}>Green</button>
         <button onClick={() => setColor("blue")}>Blue</button>
+      </div>
+
+      <div className="container">
+        <h1>Practice Task 5: Simple Todo List</h1>
+        <ul>
+          {tasks.map((t) => (
+            <li>{t}</li>
+          ))}
+        </ul>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        />
+        <button onClick={taskHandle}>Add Task</button>
       </div>
     </>
   );

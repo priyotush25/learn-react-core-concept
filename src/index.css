@@ -34,7 +34,7 @@ button:hover {
 }
 
 input {
-  padding: 20px 50px;
+  padding: 16px 50px;
   border-radius: 10px;
   font-size: 20px;
 }
@@ -45,4 +45,14 @@ input {
   border-radius: 10px;
   border: 1px solid rgb(0, 255, 0);
   margin-bottom: 15px;
+}
+
+li {
+  border: 1px solid violet;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
 }
