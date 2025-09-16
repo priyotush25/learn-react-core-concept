@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
+  const [isOn, setIsOn] = useState(false);
 
   const resetHandle = () => {
     setCount(0);
@@ -29,7 +30,19 @@ function App() {
       <div className="container">
         <h1>Practice Task 2: Input Mirror</h1>
         <h2>You Typed : {text}</h2>
-        <input value={text} type="text" onChange={inputHandle} />
+        <input
+          type="text"
+          value={text}
+          // onChange={(e) => setText(e.target.value)}
+          onChange={inputHandle}
+        />
+      </div>
+
+      <div className="container">
+        <h1>Practice Task 3: Toggle Button</h1>
+        <h2>{isOn ? "ON" : "OFF"}</h2>
+        <button onClick={() => setIsOn(true)}>ON</button>
+        <button onClick={() => setIsOn(false)}>OFF</button>
       </div>
     </>
   );
