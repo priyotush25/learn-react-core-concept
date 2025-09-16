@@ -13,6 +13,13 @@ button {
   padding: 16px 32px;
   border-radius: 8px;
   margin: 4px;
+  border: 1px solid gray;
+  font-size: 20px;
+}
+
+button:hover {
+  background: blueviolet;
+  color: white;
 }
 
 .container {
@@ -30,4 +37,12 @@ input {
   padding: 20px 50px;
   border-radius: 10px;
   font-size: 20px;
+}
+
+.box {
+  width: 520px;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 255, 0);
+  margin-bottom: 15px;
 }

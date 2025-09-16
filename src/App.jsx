@@ -5,6 +5,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
   const [isOn, setIsOn] = useState(false);
+  const [color, setColor] = useState("black");
 
   const resetHandle = () => {
     setCount(0);
@@ -43,6 +44,14 @@ function App() {
         <h2>{isOn ? "ON" : "OFF"}</h2>
         <button onClick={() => setIsOn(true)}>ON</button>
         <button onClick={() => setIsOn(false)}>OFF</button>
+      </div>
+
+      <div className="container">
+        <h1>Practice Task 4: Color Changer</h1>
+        <div className="box" style={{ background: color }}></div>
+        <button onClick={() => setColor("red")}>Red</button>
+        <button onClick={() => setColor("green")}>Green</button>
+        <button onClick={() => setColor("blue")}>Blue</button>
       </div>
     </>
   );
